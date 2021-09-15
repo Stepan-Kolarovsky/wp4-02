@@ -15,3 +15,4 @@ try {
 } catch (\Throwable $th) {
     echo "Computer issues:" . $th->getMessage();
 }
+?>

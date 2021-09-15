@@ -17,7 +17,7 @@ public function mountDrive(int $SSD)
         $this->SSD = $SSD;
         return TRUE;
     }
-   return FALSE; 
+  throw new Exception("Musí obsahovat základní desku"); 
 }
 
 public function addCPU(string $CPU)
@@ -26,7 +26,7 @@ public function addCPU(string $CPU)
         $this->CPU = $CPU;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat základní desku"); 
 }
 
 public function addRAM(string $RAM)
@@ -35,7 +35,7 @@ public function addRAM(string $RAM)
         $this->RAM = $RAM;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat základní desku"); 
 }
 
 public function connectKeyboard(string $keyboard)
@@ -44,7 +44,7 @@ public function connectKeyboard(string $keyboard)
         $this->keyboard = $keyboard;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat základní desku"); 
 }
 
 public function connectMouse (string $mouse )
@@ -53,7 +53,7 @@ public function connectMouse (string $mouse )
         $this->mouse = $mouse;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat základní desku"); 
 }
 
 public function addGPU (string $GPU )
@@ -62,7 +62,7 @@ public function addGPU (string $GPU )
         $this->GPU = $GPU;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat základní desku"); 
 }
 
 
@@ -72,7 +72,7 @@ public function connectDisplay (string $display )
         $this->display = $display;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat grafickou kartu"); 
 }
 
 public function addPowerSupply (string $PSU )
@@ -81,6 +81,6 @@ public function addPowerSupply (string $PSU )
         $this->PSU = $PSU;
         return TRUE;
     }
-   return FALSE; 
+    throw new Exception("Musí obsahovat počítačovou bednu"); 
 }}
 ?>
